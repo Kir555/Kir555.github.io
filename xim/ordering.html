@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gulp template</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&amp;amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  </head>
+  <body>
+    <div class="menu">
+      <div class="d-hidden">
+        <div class="backcall-popup">
+          <div class="backcall-popup__triangle"></div>
+          <div class="d-flex align-center">
+            <div class="backcall-popup__img"></div>
+            <h2 class="backcall__title">Здравствуйте, </br> как с вами связаться?</h2>
+          </div>
+          <form class="backcall-form" action="#">
+            <label class="backcall-label" for="name"><span class="backcall-span">Ваше имя</span>
+              <input class="backcall-input" type="text" name="name">
+            </label>
+            <label class="backcall-label" for="phone"><span class="backcall-span">Телефон</span>
+              <input class="backcall-input" type="text" name="phone">
+            </label>
+            <label class="backcall-label" for="mail"><span class="backcall-span">Электронная почта</span>
+              <input class="backcall-input" type="text" name="mail">
+            </label>
+            <label class="backcall-submit">Перезвоните мне 
+              <input class="backcall-submit" type="button">
+            </label>
+            <label class="close-popup close-backcall">Закрыть</label>
+          </form>
+        </div>
+        <div class="backcall-popup success">
+          <div class="backcall-popup__triangle"></div>
+          <div class="d-flex align-center">
+            <div class="backcall-popup__img"></div>
+            <h2 class="backcall__title">GangstaRap666, </br> как с вами связаться?</h2>
+          </div>
+          <p class="backcall-desc">С вами свяжутся в ближайшее время.    </p>
+          <label class="close-popup close-backcall">Закрыть    </label>
+        </div>
+      </div>
+      <div class="menu__top">
+        <div class="wrapper d-flex space-between"><a class="header-to-main-page" href="/">
+            <div class="header-logo"></div>
+            <div class="menu__title-row">
+              <h1 class="menu__main-title">Интернет-магазин Gekkō</h1>
+              <h2 class="menu__main-subtitle">Товары от производителей из Японии и Кореи</h2>
+            </div></a>
+          <div class="d-flex m-hidden">
+            <div class="menu__cities">
+              <h2 class="menu__city">Москва</h2>
+              <div class="choose-city__popup">
+                <div class="choose-city__popup-wrapper">
+                  <h2 class="selectCity-modal__title-new">Введите название города <button class="closeNewCity"></button></h2>
+                  <input class="newCity-input">
+                  <h2 class="choose-city__popup-title">Ваш город <span class='choose-city__popup-current'>Москва</span>?</h2>
+                  <div class="choose-city__popup-container">
+                    <button class="choose-city__popup-button">Да</button>
+                    <button class="choose-city__popup-change-city">Выбрать другой</button>
+                  </div>
+                </div>
+              </div>
+              <h3 class="menu__points">25 точек самовывоза</h3>
+            </div>
+            <div class="menu__backcall">
+              <h2 class="menu__backcall-text">8 (804) 333-14-32</h2>
+              <div class="backcall-cont">
+                <button class="menu__backcall-button">Заказать звонок</button>
+                <div class="backcall-popup">
+                  <div class="backcall-popup__triangle"></div>
+                  <div class="d-flex align-center">
+                    <div class="backcall-popup__img"></div>
+                    <h2 class="backcall__title">Здравствуйте, </br> как с вами связаться?</h2>
+                  </div>
+                  <form class="backcall-form" action="#">
+                    <label class="backcall-label" for="name"><span class="backcall-span">Ваше имя</span>
+                      <input class="backcall-input" type="text" name="name">
+                    </label>
+                    <label class="backcall-label" for="phone"><span class="backcall-span">Телефон</span>
+                      <input class="backcall-input" type="text" name="phone">
+                    </label>
+                    <label class="backcall-label" for="mail"><span class="backcall-span">Электронная почта</span>
+                      <input class="backcall-input" type="text" name="mail">
+                    </label>
+                    <label class="backcall-submit">Перезвоните мне 
+                      <input class="backcall-submit" type="button">
+                    </label>
+                    <label class="close-popup close-backcall">Закрыть</label>
+                  </form>
+                </div>
+                <div class="backcall-popup success">
+                  <div class="backcall-popup__triangle"></div>
+                  <div class="d-flex align-center">
+                    <div class="backcall-popup__img"></div>
+                    <h2 class="backcall__title">GangstaRap666, </br> как с вами связаться?</h2>
+                  </div>
+                  <p class="backcall-desc">С вами свяжутся в ближайшее время.    </p>
+                  <label class="close-popup close-backcall">Закрыть    </label>
+                </div>
+              </div>
+            </div>
+            <h2 class="menu__mail">Info@parklon.ru</h2>
+          </div>
+        </div>
+      </div>
+      <div class="menu__bottom">
+        <div class="d-hidden wrapper relative">
+          <div class="choose-city__popup">
+            <div class="choose-city__popup-wrapper">
+              <h2 class="selectCity-modal__title-new">Введите название города <button class="closeNewCity"></button></h2>
+              <input class="newCity-input">
+              <h2 class="choose-city__popup-title">Ваш город <span class='choose-city__popup-current'>Москва</span>?</h2>
+              <div class="choose-city__popup-container">
+                <button class="choose-city__popup-button">Да</button>
+                <button class="choose-city__popup-change-city">Выбрать другой</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper d-flex space-between">
+          <div class="d-flex align-center">
+            <button class="catalog-button" id="catalogButton">Каталог товаров</button>
+            <div class="search-input-container m-hidden">
+              <input class="search-input">
+              <div class="search-input-icon"></div>
+            </div>
+            <nav class="m-hidden">
+              <ul class="d-flex">
+                <li class="menu__bottom-text"><a href="#">Доставка и оплата</a></li>
+                <li class="menu__bottom-text"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="d-flex align-center menu-container">
+            <button class="sing-in">Войти</button>
+            <button class="card"><span class="basket-icon"></span><span class="count">0</span></button>
+            <button class="open-menu-button">
+              <div class="open-menu-button__icon"></div><span class="open-menu-button__text"><span>Меню</span><span>Закрыть</span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="expanded-menu">
+        <div class="wrapper">
+          <h2 class="expanded-menu__location">Санкт-Петербург</h2>
+          <div class="phone-and-backcall"><a class="expanded-menu__phone" href="tel:88043331432">8 (804) 333-14-32</a>
+            <button class="expanded-menu__backcall-button">Заказать звонок</button>
+          </div><a class="expanded-menu__mail" href="mailto:info@gekko-shop.ru">Info@gekko-shop.ru</a>
+          <div><a class="expanded-menu__route" href="/delivery.html">Доставка и оплата</a><a class="expanded-menu__route" href="#contacts">Контакты</a></div>
+        </div>
+      </div>
+      <div class="expanded-catalog__splash"></div>
+      <div class="expanded-catalog">
+        <div class="expanded-catalog__main-container">
+          <div class="d-flex wrapper expanded-catalog-mobile">
+            <div class="search-input-container search-input-mobile-container d-hidden">
+              <button class="close-search-input-container"></button>
+              <input class="search-input search-input-mobile" placeholder="Поиск по каталогу">
+              <div class="search-input-icon"></div>
+            </div>
+            <div class="search-results-container d-hidden">
+              <div class="search-results-container__top-row">
+                <h2 class="search-results-title">Вы искали</h2>
+                <button class="search-results-clear">Очистить</button>
+              </div>
+              <ul>
+                <li class="search-results-item">памперсы</li>
+                <li class="search-results-item">молочко для умывания</li>
+                <li class="search-results-item">энергетический батончик</li>
+                <li class="search-results-item">электрическая швабра    </li>
+              </ul>
+            </div>
+            <div class="expanded-catalog__left">
+              <ul>
+                <li class="expanded-catalog__menu-text first active">
+                  <span class='expanded-catalog__menu-icon health'></span>
+                  Красота и здоровье
+                </li>
+                <ul class="expanded-catalog__items">
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Средства для стирки</a></li>
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Чистящие и моющие средства</a></li>
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Принадлежности для кухни</a></li>
+                </ul>
+                <li class="expanded-catalog__menu-text second">
+                  <span class='expanded-catalog__menu-icon prods'></span>
+                  Товары для дома
+                </li>
+                <ul class="expanded-catalog__items">
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Товары для дома</a></li>
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Чистящие и моющие средства</a></li>
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Принадлежности для кухни  </a></li>
+                </ul>
+                <li class="expanded-catalog__menu-text third">
+                  <span class='expanded-catalog__menu-icon for-kids'></span>
+                  Товары для детей
+                </li>
+                <ul class="expanded-catalog__items">
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Товары для детей</a></li>
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Чистящие и моющие средства</a></li>
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Принадлежности для кухни  </a></li>
+                </ul>
+                <li class="expanded-catalog__menu-text fourth">
+                  <span class='expanded-catalog__menu-icon for-pets'></span>
+                  Товары для животных
+                </li>
+                <ul class="expanded-catalog__items">
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Товары для животных</a></li>
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Чистящие и моющие средства</a></li>
+                  <li class="expanded-catalog-item"><a class="expanded-catalog__route" href="#">Принадлежности для кухни  </a></li>
+                </ul>
+                <li class="expanded-catalog__menu-text promo fifth">
+                  <a href="#">
+                  <span class='expanded-catalog__menu-icon stock'></span>
+                  Акции</a>
+                </li>
+              </ul>
+            </div>
+            <div class="expanded-catalog__right">
+              <div class="expanded-catalog-items first active">
+                <nav>
+                  <ul>
+                    <li><a class="expanded-catalog__route" href="#">Средства для стирки</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Чистящие и моющие средства</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Принадлежности для кухни</a></li>
+                  </ul>
+                </nav>
+                <div class="brends">
+                  <h2 class="brends__title">Бренды
+                    <div class="d-flex">
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                    </div>
+                  </h2>
+                </div>
+              </div>
+              <div class="expanded-catalog-items second">
+                <nav>
+                  <ul>
+                    <li><a class="expanded-catalog__route" href="#">Товары для дома</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Чистящие и моющие средства</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Принадлежности для кухни</a></li>
+                  </ul>
+                </nav>
+                <div class="brends">
+                  <h2 class="brends__title">Бренды
+                    <div class="d-flex">
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend">       </div>
+                    </div>
+                  </h2>
+                </div>
+              </div>
+              <div class="expanded-catalog-items third">
+                <nav>
+                  <ul>
+                    <li><a class="expanded-catalog__route" href="#">Товары для детей</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Чистящие и моющие средства</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Принадлежности для кухни</a></li>
+                  </ul>
+                </nav>
+                <div class="brends">
+                  <h2 class="brends__title">Бренды
+                    <div class="d-flex">
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend">               </div>
+                    </div>
+                  </h2>
+                </div>
+              </div>
+              <div class="expanded-catalog-items fourth">
+                <nav>
+                  <ul>
+                    <li><a class="expanded-catalog__route" href="#">Товары для животных</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Чистящие и моющие средства</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Принадлежности для кухни</a></li>
+                  </ul>
+                </nav>
+                <div class="brends">
+                  <h2 class="brends__title">Бренды
+                    <div class="d-flex">
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                    </div>
+                  </h2>
+                </div>
+              </div>
+              <div class="expanded-catalog-items fifth">
+                <nav>
+                  <ul>
+                    <li><a class="expanded-catalog__route" href="#">Акции</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Чистящие и моющие средства</a></li>
+                    <li><a class="expanded-catalog__route" href="#">Принадлежности для кухни</a></li>
+                  </ul>
+                </nav>
+                <div class="brends">
+                  <h2 class="brends__title">Бренды
+                    <div class="d-flex">
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend"></div>
+                      <div class="brend">       </div>
+                    </div>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="wrapper ordering-container">
+      <h1 class="main-title">Корзина <span class='basket-title-count'>1</span></h1>
+      <div class="ordering-container__cols">
+        <div>
+          <div class="ordering__item-container">
+            <div class="ordering-container__item">
+              <div class="ordering__item-img"></div>
+              <div class="ordering__item-desc">
+                <div class="ordering__item-title">APAGARD Apa Kids — детская зубная паста</div>
+                <div class="ordering-price">2 450 руб.</div>
+                <div class="ordering-item__buttons">
+                  <div class="restore">
+                    <p class="restore__text">Удалён из корзины</p>
+                    <button class="restore__button">Восстановить</button>
+                  </div>
+                  <div class="ordering-item__main-buttons">
+                    <button class="ordering-item__remove">-</button>
+                    <input class="ordering-item__count" value="1">
+                    <button class="ordering-item__add">+</button>
+                  </div>
+                  <button class="ordering-item-basket"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ordering-container__item-bottom-row">
+            <div class="ordering-container__item-bottom-row-buttons">
+              <input class="ordering-container__coupon" placeholder="Ввести скидочный купон">
+              <button class="ordering-container__coupon-button">Применить</button>
+            </div>
+            <h2 class="ordering-total-cost">2 450 руб.  </h2>
+          </div>
+        </div>
+        <div class="ordering-container__right-col">
+          <div class="ordering-container__right-col-container">
+            <h2 class="ordering-container__right-col-title">Оформление заказа</h2>
+            <h3 class="ordering-container__right-col-subtitle">Получатель</h3>
+            <form class="ordering-form" action="#">
+              <div class="form-row">
+                <div class="ordering-form__container">
+                  <label class="ordering-form__label" for="name">Имя и фамилия</label>
+                  <input class="ordering-form__input" type="text" name="name">
+                </div>
+                <div class="ordering-form__container">
+                  <label class="ordering-form__label" for="phone">Телефон</label>
+                  <input class="ordering-form__input" type="text" name="phone">
+                </div>
+                <div class="ordering-form__container">
+                  <label class="ordering-form__label" for="mail">Электронная почта</label>
+                  <input class="ordering-form__input" type="text" name="mail">
+                </div>
+              </div>
+              <div class="ordering-form__container ordering-form__middle">
+                <label class="ordering-form__label">Комментарий к заказу</label>
+                <textarea class="ordering-form__textarea" name="comment" cols="30" rows="10"></textarea>
+              </div>
+              <div class="ordering-form__cities">
+                <h2 class="ordering-form__cities-title">Доставка в <span class='ordering-form__choose-city'>Москва</span></h2>
+              </div>
+              <div class="ordering-form__buttons">
+                <h3 class="ordering-form__schedule-desc">Выберите способ доставки</h3>
+                <div class="ordering-form__buttons-container">
+                  <button class="ordering-form__button point active">Самовывоз в СДЭК</button>
+                  <button class="ordering-form__button courier">Курьером</button>
+                  <div class="ordering-form__schedule">
+                    <p class="ordering-form__schedule-desc">6 декабря, четверг</p>
+                    <p class="ordering-form__schedule-desc">с 9:00 до 20:00</p>
+                    <p class="ordering-form__schedule-desc address">по адресу пр-т Ленинградский д.2.</p>
+                    <div class="ordering-form__schedule-cancel">Отменить</div>
+                  </div>
+                </div>
+              </div>
+              <div class="ordering-container__payment">
+                <h3 class="ordering-container__right-col-subtitle">Оплата</h3>
+                <div class="d-flex">
+                  <div class="pay-img"></div>
+                  <h2 class="pay-desc">Онлайн банковской картой</h2>
+                </div>
+              </div>
+              <div class="ordering-form__bottom">
+                <div>
+                  <div class="ordering-form__bottom-row">
+                    <h2 class="ordering-form__bottom-row-title">Товары</h2>
+                    <h2 class="ordering-form__bottom-row-title">2 450 руб.</h2>
+                  </div>
+                  <div class="ordering-form__bottom-row">
+                    <h2 class="ordering-form__bottom-row-title">Самовывоз (СДЭК)</h2>
+                    <h2 class="ordering-form__bottom-row-title">250 руб.</h2>
+                  </div>
+                  <div class="ordering-form__bottom-row">
+                    <h2 class="ordering-form__bottom-row-title-middle">Итого:</h2>
+                    <h2 class="ordering-form__bottom-row-title-big">2 700 руб.</h2>
+                  </div>
+                </div>
+                <button class="ordering-form__submit">Перейти к оплате</button>
+              </div>
+            </form>
+          </div>
+          <p class="ordering-form__privacy">Нажимая на кнопку, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с Условиями, а также с Условиями продажи  </p>
+        </div>
+      </div>
+    </section>
+    <button class="back-to-top__button back-to-top-container d-flex align-center justify-center" id="backToTopButton"><span class='back-to-top__arrow-icon'></span>Вернуться в начало</button>
+    <footer class="footer">
+      <div class="wrapper footer__container">
+        <div class="footer__col">
+          <h2 class="copy">© 2018 Gekko — Товары от производителей из Японии и Кореи</h2>
+          <div class="footer__logo"></div>
+        </div>
+        <div class="footer__col">
+          <nav>
+            <ul>
+              <li class="footer__router"> <a href="/catalog.html">Каталог товаров</a></li>
+              <li class="footer__router"><a href="/delivery">Оплата и доставка</a></li>
+              <li class="footer__router"><a href="#">Обмен и возврат</a></li>
+              <li class="footer__router"><a href="#">Оптовые продажи</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <nav>
+            <ul>
+              <li class="footer__router"><a href="/about">О магазине Gekko</a></li>
+              <li class="footer__router"><a href="/reviews">Отзывы</a></li>
+              <li class="footer__router"><a href="/contacts">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col"><a class="footer__contacts" href="">8 (804) 333-14-32</a><a class="footer__contacts" href="">Info@parklon.ru</a></div>
+        <div class="footer__col">
+          <h2 class="footer__social-title">Присоединяйтесь к нам в соцсетях</h2>
+          <div class="d-flex"><a class="footer__social-icon vk" href="#"></a><a class="footer__social-icon fb" href="#"></a><a class="footer__social-icon inst" href="#"></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
