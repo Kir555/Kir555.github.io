@@ -1,0 +1,89 @@
+.extra-reviews {
+	margin-bottom: 30px;
+	position: relative;
+
+	&__heading {
+		text-align: center;
+
+		img.extra-reviews__slider-img {
+			width: auto ; 
+			display: inline-block;
+		}
+	}
+
+	&__dots {
+		display: table;
+		margin: 0 auto;
+	}
+
+	&__dot {
+		width: 8px;
+		height: 8px;
+		background-color: @300-grey;
+		display: inline-block;
+		border-radius: 50%;
+		margin-right: 3px;
+
+		&.active {
+			background-color: @yellow;
+		}
+	}
+
+	&__name {
+		font-weight: @bold;
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	&__images {
+		display: inline-block;
+	}
+
+	&__slider-img {		
+		//transform: scale(0.7);
+		//opacity: 0.65;
+
+		&:hover {
+			//cursor: pointer;
+			//opacity: 0.8;
+		}
+
+		&.active {
+			//transform: scale(1);
+			//opacity: 1;
+		}
+
+
+	}
+
+	&__arrow {
+		text-indent: -9999px;
+		overflow: hidden;
+		background: none;
+		border: none;
+		position: absolute;
+		top: 60px;
+		z-index: 2;
+
+		&:active {
+			outline: none;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&--left {
+			.icon-svg(left-icon);
+			margin-right: 20px; 
+			left: 20px;
+		}
+
+		&--right {
+			.icon-svg(left-icon);
+			margin-left: 20px; 
+			right: 20px;
+			transform: rotate(180deg);
+		}
+	}
+}

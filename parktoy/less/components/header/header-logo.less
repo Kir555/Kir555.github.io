@@ -1,0 +1,19 @@
+.header-logo {
+	position: absolute;
+	background-color: @white;
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+	z-index: 2;
+	padding: 30px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+	@media (max-width: @screen-sm-max) {
+		display: inline-block;
+		padding: 15px 0;
+		position: static;
+		background-color: transparent;
+		margin-right: 30px;
+		box-shadow: none;
+    }
+
+}

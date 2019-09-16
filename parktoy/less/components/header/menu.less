@@ -1,0 +1,28 @@
+.menu {
+	float: right;
+	padding: 20px 0;
+
+	@media (max-width: @screen-sm-max) {
+       float: none;
+       display: flex;
+       justify-content: space-between;
+    }
+
+    @media (max-width: @screen-xs-max) {
+       display: none;
+    }
+
+	&__item {
+		display: inline-block;
+		padding: 0 12px;
+
+		a {
+			color: @main-color;
+			font-weight: @bold;
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}

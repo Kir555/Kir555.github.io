@@ -1,0 +1,108 @@
+.icon-before(@name, @block-height) {
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        @url: "../img/@{name}.png";
+        @width: image-width(@url);
+        @height: image-height(@url);
+        background-image: url(@url);
+        background-repeat: no-repeat;
+        width: @width;
+        height: @height;
+        left: 0;
+        top: ((@block-height)-@height)/2;
+    }
+}
+
+.background-gradient(@position, @color-1, @color-2){
+    background: -moz-linear-gradient(@position, @color-1 0%, @color-2 100%);
+    background: -webkit-linear-gradient(@position, @color-1 0%, @color-2 100%);
+    background: -o-linear-gradient(@position, @color-1 0%, @color-2 100%);
+    background: -ms-linear-gradient(@position, @color-1 0%, @color-2 100%);
+    background: linear-gradient(@position, @color-1 0%, @color-2 100%);
+}
+
+.block-wrapper {
+    background-color: @white;
+    padding: 30px;
+    border: @grey-border;
+    border-radius: 10px;
+}
+
+.input {
+    border: none;
+    border-bottom: @grey-border;
+    line-height: 30px;
+    width: 100%;
+    font-weight: @book;
+    margin-bottom: 20px;
+    padding-left: 5px;
+
+    &:hover {
+        outline: none;
+        border-color: fadeout(@main-color, 70%);
+    }
+
+    &:focus {
+        outline: none;
+        border-color: @yellow;
+    }
+}
+
+
+.icon-svg(@name) {
+    content: "";
+    display: block;
+    position: absolute;
+    @url: "../img/@{name}.svg";
+    background-image: url(@url);
+    background-repeat: no-repeat;
+    @width: image-width(@url);
+    @height: image-height(@url);
+    width: @width;
+    height: @height;
+}
+
+.social-icon(@name, @format) {
+    &:before {
+        @url: "../img/@{name}.@{format}";
+        content: "";
+        @width: image-width(@url);
+        @height: image-height(@url);
+        position: absolute;
+        width: @width;
+        height: @height;
+        left: (30px - @width)/2;
+        top: (30px - @height)/2;
+        display: block;
+        background: url(@url) no-repeat center center;
+        
+    }
+}
+
+
+.clearfix() {
+    
+    &:after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+}
+
+.box-shadow() {
+    box-shadow: 0 0px 15px 4px rgba(0, 0, 0, 0.03);
+} 
+
+.flex-wrap-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;     
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

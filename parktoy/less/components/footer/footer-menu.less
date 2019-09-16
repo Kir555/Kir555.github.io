@@ -1,0 +1,35 @@
+.footer-menu {
+	list-style-type: none;
+	padding: 0;
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 70px;
+		font-weight: @medium;
+		line-height: 25px;
+
+		@media (max-width: @screen-md-max) {
+	       margin-right: 50px;
+	       margin-bottom: 15px;
+	    }
+	    
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+
+	}
+
+	@media (max-width: @screen-sm-max) {
+       margin-bottom: 15px;
+    }
+
+	&__submenu {
+		list-style-type: none;
+		padding: 0;
+		font-weight: @regular;
+	}
+
+}

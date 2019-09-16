@@ -1,0 +1,61 @@
+.partners-container {
+	display: table;
+	.flex-wrap-container;
+}
+
+.partner {
+	padding: 30px 15px;
+	display: inline-block;
+	vertical-align: top;
+	width: 33.33%;
+    margin-bottom: 50px;
+
+    @media (max-width: @screen-sm-max) {
+        width: 45%;
+    }
+
+
+    @media (max-width: @screen-xs-max) {
+       width: 80%;
+       margin: 0 auto;
+       margin-bottom: 30px;
+       display: block;
+    }
+
+	&__title {
+		font-size: @x-large;
+		font-weight: @medium;
+		margin-bottom: 15px;
+		color: @main-text-color;
+	}
+
+	&__adress {
+		margin-top: 15px;
+	}
+
+	&__contacts {
+		.clearfix;
+		margin-bottom: 15px;
+	}
+
+	&__phone {
+		float: left;
+		font-size: @normal + 2;
+	}
+
+	&__site {
+		float: right;
+		display: table;
+		text-decoration: underline;
+	}
+
+	&__show-map {
+		text-decoration: underline;
+		display: table;
+		margin: 0 auto;
+
+		&:hover {
+			color: @main-color;
+		}
+	}
+}

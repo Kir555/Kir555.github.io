@@ -1,0 +1,44 @@
+.footer-social {
+
+	&__title {
+		font-weight: @medium;
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		text-indent: -9999px;
+		display: inline-block;
+		background-color: @400-grey;
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		border-radius: 50%;
+		position: relative;
+
+		&:hover {
+			background-color: @main-color;
+		}
+
+		&--facebook {
+			.social-icon(social-facebook, svg);
+		}
+
+		&--ok {
+			.social-icon(social-ok, png);
+		}
+
+		&--vk {
+			.social-icon(social-vk, png);
+		}
+
+		&--youtube {
+			.social-icon(social-youtube, png);
+		}
+
+		&--insta {
+			.social-icon(social-insta, png);
+		}
+	}
+
+
+}

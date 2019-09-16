@@ -1,0 +1,48 @@
+.contacts {
+	font-size: @normal + 2px;
+
+	&__title {
+		font-size: @x-large;
+		font-weight: @medium;
+		margin-bottom: 15px;
+		color: @main-text-color;
+	}
+
+	&__phone {
+		padding-left: 35px;
+		font-size: @large;
+		position: relative;
+
+		&:before {
+			.icon-svg(phone-icon-black);
+			left: 0;
+			top: (28 - @height) / 2;
+
+		}
+
+	}
+
+	&__email {
+		padding-left: 35px;
+		position: relative;
+
+		&:before {
+			.icon-svg(email-icon-black);
+			left: 0;
+			top: (25 - @height) / 2;
+
+		}
+	}
+
+	&__adress {
+		padding-left: 35px;
+		position: relative;
+
+		&:before {
+			.icon-svg(place-icon-black);
+			left: 0;
+			top: (25 - @height) / 2;
+
+		}
+	}
+}

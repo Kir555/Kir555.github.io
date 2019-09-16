@@ -1,0 +1,39 @@
+.button-more {
+		border: @grey-border;
+		background-color: @white;
+		font-weight: @medium;
+		@padding: (45px - @normal*@line-height)/2;
+		padding: @padding 25px;
+		padding-right: 50px;
+		border-radius: 10px;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		margin-top: -15px;
+		
+		&:after {
+			.icon-svg(load-icon);
+	        right: 20px;
+	        top: (45px - @height)/2;
+	        opacity: 0.3;
+		}
+
+		&:hover {
+			.background-gradient(bottom, @yellow, @yellow-2);
+
+			&:after {
+				opacity: 1;
+				transform: rotate(90deg);
+
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&:active {
+			outline: none;
+		}
+
+	}

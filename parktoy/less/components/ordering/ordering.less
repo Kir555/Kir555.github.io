@@ -1,0 +1,60 @@
+.ordering {
+
+	margin-bottom: 50px;
+
+	&__wrapper {
+		.block-wrapper();
+		position: relative;
+
+		&--space-bottom  {
+			padding-bottom: 60px;
+		}
+	}
+
+	&__title {
+		font-weight: @medium;
+		font-size: @x-large;
+		margin-bottom: 20px;
+		color: @main-text-color;
+	}
+
+	&__subtitle {
+		font-weight: @heavy;
+		font-size: @large;
+		margin-bottom: 20px;
+	}
+
+	&__total {
+		text-align: right;
+	}
+
+	&__summury {
+		font-weight: @bold;
+		vertical-align: middle;
+		line-height: 1.2 * @large;
+
+		&-value {
+			font-size: @large;
+			float: right;
+			vertical-align: middle;
+		}
+	}
+
+	&__input {
+		.input();
+	}
+
+	&__delivery-block {
+		max-height: 150px;
+		overflow: visible;
+		overflow-y: scroll;
+		position: relative;
+		-ms-overflow-style: none;
+		overflow: -moz-scrollbars-none;
+
+		&::-webkit-scrollbar { 
+			width: 0; 
+		}
+
+	}
+}
