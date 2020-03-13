@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>gulp template</title>
     <link rel="stylesheet" href="css/style.css">
@@ -19,6 +19,9 @@
               <div class="selectCity-modal">
                 <h2 class="selectCity-modal__title-new">Введите название города <button class="closeNewCity"></button></h2>
                 <input class="newCity-input">
+                <label class="city-checkbox-label" id="city-checkbox-label" for="city-checkbox"><span class="city-checkbox-text">Если вашего города нет в списке, оформите </b> доставку через менеджера</span>
+                  <input class="city-checkbox" id="city-checkbox" type="checkbox" name="city-checkbox"><span class="city-checkbox-arrow"></span>
+                </label>
                 <h2 class="selectCity-modal__title">Ваш город <span>Москва</span>?</h2>
                 <div class="selectCity-modal__buttons">
                   <button class="selectCity-modal__accept">Да</button>
@@ -35,20 +38,28 @@
       <div class="main-menu">
         <nav class="wrapper">
           <ul class="main-menu__list">
-            <li class="main-menu__logo-item"><a class="main-menu__list__logo" href="#">Parklon</a><span class="annotation">Игровые коврики для ваших малышей</span></li>
+            <li class="main-menu__logo-item"><a class="main-menu__list__logo" href="/">Parklon</a><span class="annotation">Игровые коврики для ваших малышей</span><span class="mobile-sub-menu__list__city selectCity"><span>Москва</span>
+                <div class="triangle"></div>
+                <div class="selectCity-modal">
+                  <h2 class="selectCity-modal__title-new">Введите название города <button class="closeNewCity"></button></h2>
+                  <input class="newCity-input">
+                  <label class="city-checkbox-label" id="city-checkbox-label" for="city-checkbox1"><span class="city-checkbox-text">Если вашего города нет в списке, оформите </b> доставку через менеджера</span>
+                    <input class="city-checkbox" id="city-checkbox1" type="checkbox" name="city-checkbox1"><span class="city-checkbox-arrow"></span>
+                  </label>
+                  <h2 class="selectCity-modal__title">Ваш город <span>Москва</span>?</h2>
+                  <div class="selectCity-modal__buttons">
+                    <button class="selectCity-modal__accept">Да</button>
+                    <button class="selectCityChange">Выбрать другой</button>
+                  </div>
+                </div></span></li>
             <li class="main-menu__back-call-item">
               <div class="main-menu__list-container">
                 <div class="main-menu__list-title">Бесплатный звонок по России</div>
-                <div class="main-menu__list-sub-title"> <span>8 (804) 333-14-32</span>
-                  <button class="main-menu__list-back-call showBackCall">Заказать обратный звонок</button>
-                </div>
+                <div class="main-menu__list-sub-title"> <span><a href="tel:88043331432">8 (804) 333-14-32</a></span></div>
               </div>
             </li>
-            <li class="main-menu__email">
-              <div class="main-menu__list-container">
-                <div class="main-menu__list-title">Электронная почта</div>
-                <div class="main-menu__list-sub-title"> <span>Info@parklon.ru</span></div>
-              </div>
+            <li class="main-menu__search">
+              <input class="main-menu-search-input" placeholder="Поиск по сайту...">
             </li>
             <li>
               <div class="main-menu__list-cart">
@@ -69,28 +80,32 @@
         </nav>
       </div>
       <div class="mobile-visible expanded-menu" id="expandedMenu">
-        <h2 class="expanded-menu__title">Бесплатный звонок по России</h2><a class="expanded-menu__phone-link" href="tel:88043331432">8 (804) 333-14-32</a>
-        <button class="expanded-menu-show-back-call showBackCall">Заказать обратный звонок</button><a class="expanded-menu__mail-link" href="mailto:info@parklon.ru">Info@parklon.ru</a>
+        <h2 class="expanded-menu__title">Бесплатный звонок по России</h2><a class="expanded-menu__phone-link" href="tel:88043331432">8 (804) 333-14-32</a><a class="expanded-menu__mail-link" href="mailto:info@parklon.ru">Info@parklon.ru</a>
       </div>
       <div class="bottom-menu">
+        <div class="main-menu__search">
+          <input class="main-menu-search-input" placeholder="Поиск по сайту...">
+        </div>
         <nav>
           <ul class="bottom-menu__list wrapper">
             <li><a class="active" href="/catalog.html">Каталог</a></li>
             <li><a href="/blog.html">Блог</a></li>
-            <li><a href="#">Вопрос - ответ</a></li>
+            <li><a href="/faq.html">Вопрос - ответ</a></li>
             <li><a href="/feedback.html">Отзывы</a></li>
             <li><a href="#">О компании</a></li>
             <li><a href="/contacts.html">Контакты</a></li>
           </ul>
-          <ul class="mobile-menu__list"><span class="wrapper">
-              <li>Ваш город —<a href="#">Москва</a></li></span></ul>
         </nav>
       </div>
     </div>
     <section class="wrapper product-page__padding-top">
+      <ul class="back-routes">
+        <li><a class="back-routes__route" href="#">Изменить информацию в заказе</a></li>
+      </ul>
       <div class="checkout checkout_success">
-        <h1 class="main-title_success">Спасибо!</h1>
-        <h2 class="main-sub-title_success">Ваш заказ оформлен</h2>
+        <h1 class="main-title_success">Спасибо за заказ!</h1>
+        <h2 class="main-sub-title_success">В ближайшее время менеджер свяжется с вами, чтобы уточнить детали</h2>
+        <div class="checkout-success-img"></div>
         <div class="success-order">
           <div class="success-order__row">
             <div class="success-order__left-col">Заказ</div>
@@ -120,10 +135,21 @@
       <div class="success-order__recomend">
         <h2 class="success-order__recomend-title">Смотрите также</h2>
         <div class="success-order__recomend-row"><a class="success-order__recomend-item">
-            <div class="success-order__recomend-photo" style="background-image: url(img/recomend1.jpg)"></div>
-            <div class="success-order__recomend-desc">Отзывы на коврики Parklon</div></a><a class="success-order__recomend-item">
-            <div class="success-order__recomend-photo" style="background-image: url(img/recomend2.jpg)"></div>
-            <div class="success-order__recomend-desc">Интересные статьи по теме</div></a></div>
+            <div class="success-order__recomend-photo" style="background-image: url(img/recomend1.png)"></div>
+            <div>
+              <div class="success-order__recomend-desc">Как называется врач, который смотрит в ухо</div>
+              <div class="success-order__recomend-desc-text">Смена прозрачных соплей выделениями другого цвета – желтого или зеленого, считается вполне нормальным явлением.</div>
+            </div></a><a class="success-order__recomend-item">
+            <div class="success-order__recomend-photo" style="background-image: url(img/recomend2.png)"></div>
+            <div>
+              <div class="success-order__recomend-desc">Интересные статьи по теме</div>
+              <div class="success-order__recomend-desc-text">Смена прозрачных соплей выделениями другого цвета – желтого или зеленого, считается вполне нормальным явлением.</div>
+            </div></a><a class="success-order__recomend-item">
+            <div class="success-order__recomend-photo" style="background-image: url(img/recomend3.png)"></div>
+            <div>
+              <div class="success-order__recomend-desc">Интересные статьи по теме</div>
+              <div class="success-order__recomend-desc-text">Смена прозрачных соплей выделениями другого цвета – желтого или зеленого, считается вполне нормальным явлением.</div>
+            </div></a></div>
       </div>
     </section>
     <div class="back-call-modal" id="backCallModal">
@@ -172,14 +198,13 @@
       <div class="wrapper">
         <div class="footer__row">
           <div class="footer__col first">
-            <div class="footer__logo"></div><a class="footer__route" href="#"> <span>Оптовым клиентам</span></a><a class="footer__route footer__route-about" href="#"><span>О компании</span></a>
-            <p class="footer__text copy">2015 — 2017 ©Parklon</p>
+            <div class="footer__logo"></div><a class="footer__route" href="#"> <span>Условия доставки</span></a><a class="footer__route footer__route-about" href="#"><span>Оптовым клиентам</span></a>
+            <p class="footer__text copy">2015 — 2020 ©Parklon</p>
           </div>
           <div class="footer__col second"><a class="footer__main-route" href="#"> <span>Каталог</span></a><a class="footer__route" href="#"><span>Доставка и оплата</span></a><a class="footer__route" href="#"><span>Гарантии и возврат</span></a><a class="footer__route" href="#"><span>Вопрос-ответ</span></a><a class="footer__route" href="#"> <span>Отзывы</span></a><a class="footer__route" href="#"> <span>Контакты</span></a></div>
           <div class="footer__col third">
-            <p class="footer__text">Бесплатный звонок по России</p><a class="footer__phone-link" href="tel:88043331432">8 (804) 333-14-32</a>
-            <button class="show-back-call showBackCall">Заказать обратный звонок</button><a class="footer__mail" href="mailto:info@parklon.ru">Info@parklon.ru</a>
-            <p class="footer__text">Мы в социальных сетях:</p><a class="footer__vk-route" href="#"><span>Вконтакте</span></a>
+            <p class="footer__text">Бесплатный звонок по России</p><a class="footer__phone-link" href="tel:88043331432">8 (804) 333-14-32</a><a class="footer__mail" href="mailto:info@parklon.ru">Info@parklon.ru</a>
+            <p class="footer__text">Мы в социальных сетях:</p><a class="footer__fb-route" href="#"><span>Facebook</span></a>
           </div>
           <div class="footer__col fourth">
             <div class="footer__inst"></div>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>gulp template</title>
     <link rel="stylesheet" href="css/style.css">
@@ -19,6 +19,9 @@
               <div class="selectCity-modal">
                 <h2 class="selectCity-modal__title-new">Введите название города <button class="closeNewCity"></button></h2>
                 <input class="newCity-input">
+                <label class="city-checkbox-label" id="city-checkbox-label" for="city-checkbox"><span class="city-checkbox-text">Если вашего города нет в списке, оформите </b> доставку через менеджера</span>
+                  <input class="city-checkbox" id="city-checkbox" type="checkbox" name="city-checkbox"><span class="city-checkbox-arrow"></span>
+                </label>
                 <h2 class="selectCity-modal__title">Ваш город <span>Москва</span>?</h2>
                 <div class="selectCity-modal__buttons">
                   <button class="selectCity-modal__accept">Да</button>
@@ -35,20 +38,28 @@
       <div class="main-menu">
         <nav class="wrapper">
           <ul class="main-menu__list">
-            <li class="main-menu__logo-item"><a class="main-menu__list__logo" href="#">Parklon</a><span class="annotation">Игровые коврики для ваших малышей</span></li>
+            <li class="main-menu__logo-item"><a class="main-menu__list__logo" href="/">Parklon</a><span class="annotation">Игровые коврики для ваших малышей</span><span class="mobile-sub-menu__list__city selectCity"><span>Москва</span>
+                <div class="triangle"></div>
+                <div class="selectCity-modal">
+                  <h2 class="selectCity-modal__title-new">Введите название города <button class="closeNewCity"></button></h2>
+                  <input class="newCity-input">
+                  <label class="city-checkbox-label" id="city-checkbox-label" for="city-checkbox1"><span class="city-checkbox-text">Если вашего города нет в списке, оформите </b> доставку через менеджера</span>
+                    <input class="city-checkbox" id="city-checkbox1" type="checkbox" name="city-checkbox1"><span class="city-checkbox-arrow"></span>
+                  </label>
+                  <h2 class="selectCity-modal__title">Ваш город <span>Москва</span>?</h2>
+                  <div class="selectCity-modal__buttons">
+                    <button class="selectCity-modal__accept">Да</button>
+                    <button class="selectCityChange">Выбрать другой</button>
+                  </div>
+                </div></span></li>
             <li class="main-menu__back-call-item">
               <div class="main-menu__list-container">
                 <div class="main-menu__list-title">Бесплатный звонок по России</div>
-                <div class="main-menu__list-sub-title"> <span>8 (804) 333-14-32</span>
-                  <button class="main-menu__list-back-call showBackCall">Заказать обратный звонок</button>
-                </div>
+                <div class="main-menu__list-sub-title"> <span><a href="tel:88043331432">8 (804) 333-14-32</a></span></div>
               </div>
             </li>
-            <li class="main-menu__email">
-              <div class="main-menu__list-container">
-                <div class="main-menu__list-title">Электронная почта</div>
-                <div class="main-menu__list-sub-title"> <span>Info@parklon.ru</span></div>
-              </div>
+            <li class="main-menu__search">
+              <input class="main-menu-search-input" placeholder="Поиск по сайту...">
             </li>
             <li>
               <div class="main-menu__list-cart">
@@ -69,21 +80,21 @@
         </nav>
       </div>
       <div class="mobile-visible expanded-menu" id="expandedMenu">
-        <h2 class="expanded-menu__title">Бесплатный звонок по России</h2><a class="expanded-menu__phone-link" href="tel:88043331432">8 (804) 333-14-32</a>
-        <button class="expanded-menu-show-back-call showBackCall">Заказать обратный звонок</button><a class="expanded-menu__mail-link" href="mailto:info@parklon.ru">Info@parklon.ru</a>
+        <h2 class="expanded-menu__title">Бесплатный звонок по России</h2><a class="expanded-menu__phone-link" href="tel:88043331432">8 (804) 333-14-32</a><a class="expanded-menu__mail-link" href="mailto:info@parklon.ru">Info@parklon.ru</a>
       </div>
       <div class="bottom-menu">
+        <div class="main-menu__search">
+          <input class="main-menu-search-input" placeholder="Поиск по сайту...">
+        </div>
         <nav>
           <ul class="bottom-menu__list wrapper">
             <li><a class="active" href="/catalog.html">Каталог</a></li>
             <li><a href="/blog.html">Блог</a></li>
-            <li><a href="#">Вопрос - ответ</a></li>
+            <li><a href="/faq.html">Вопрос - ответ</a></li>
             <li><a href="/feedback.html">Отзывы</a></li>
             <li><a href="#">О компании</a></li>
             <li><a href="/contacts.html">Контакты</a></li>
           </ul>
-          <ul class="mobile-menu__list"><span class="wrapper">
-              <li>Ваш город —<a href="#">Москва</a></li></span></ul>
         </nav>
       </div>
     </div>
@@ -130,7 +141,9 @@
           </div>
         </div>
         <div class="checkout__bascket-bottom-row">
-          <h2 class="checkout__bascket-coupon-appled hide" id="couponAppled">Ура! Скидочный купон активирован!</h2>
+          <h2 class="checkout__bascket-coupon-appled hide" id="couponAppled">Ура! Скидочный купон активирован!
+            <button class="remove-coupon">Удалить этот купон</button>
+          </h2>
           <div class="checkout__bascket-coupon-row hide" id="couponRow">
             <input class="checkout__bascket-coupon-input" id="couponInput">
             <button class="checkout__bascket-coupon-apply" id="couponApply">Применить</button>
@@ -141,20 +154,23 @@
         </div>
         <div class="checkout__delivery">
           <h2 class="checkout__delivery-title">Доставка</h2>
-          <h3 class="checkout__delivery-way">Способ доставки</h3>
-          <div class="toggle"><span class="toggle-button active" onclick="openTab(event, 'tab1', 'checkout__list')">Самовывоз в СДЭК</span><span class="toggle-button" onclick="openTab(event, 'tab2', 'checkout__list')">Служба доставки</span></div><span class="validate" id="delivery">Заполните это поле.</span>
-          <div class="checkout__delivery-adress">
-            <h4 class="checkout__delivery-city-title" id="dilveryType">Выберите адрес самовывоза в городе</h4><a class="checkout__delivery-city selectCity"><span class="dash">Москва</span>
+          <h3 class="checkout__delivery-way">Способ доставки в город<a class="checkout__delivery-city selectCity"><span class="dash">Москва</span>
               <div class="triangle"></div>
               <div class="selectCity-modal">
                 <h2 class="selectCity-modal__title-new">Введите название города <button class="closeNewCity"></button></h2>
                 <input class="newCity-input">
+                <label class="city-checkbox-label" id="city-checkbox-label2" for="city-checkbox2"><span class="city-checkbox-text">Если вашего города нет в списке, оформите </b> доставку через менеджера</span>
+                  <input class="city-checkbox" id="city-checkbox2" type="checkbox" name="city-checkbox2"><span class="city-checkbox-arrow"></span>
+                </label>
                 <h2 class="selectCity-modal__title">Ваш город <span>Москва</span>?</h2>
                 <div class="selectCity-modal__buttons">
                   <button class="selectCity-modal__accept">Да</button>
                   <button class="selectCityChange">Выбрать другой</button>
                 </div>
-              </div></a>
+              </div></a></h3>
+          <div class="toggle"><span class="toggle-button active" onclick="openTab(event, 'tab1', 'checkout__list')">Самовывоз</span><span class="toggle-button" onclick="openTab(event, 'tab2', 'checkout__list')">Доставка курьером</span></div><span class="validate" id="delivery">Заполните это поле.</span>
+          <div class="checkout__delivery-adress">
+            <h4 class="checkout__delivery-city-title" id="dilveryType">Выберите адрес самовывоза</h4>
           </div>
         </div>
         <div class="checkout__list" id="tab1" style="display:block">
@@ -163,9 +179,9 @@
             <div class="col-18">Когда привезут</div>
             <div class="col-40">Сколько стоит</div>
           </div>
-          <div class="checkout__listcontent" id="search-content">
-            <input type="text" placeholder="Поиск по адресу" id="search-filter" onkeyup="searchFilter()">
-            <div id="not-found-list" style="display:none">
+          <div class="checkout__listcontent" id="search-content-0">
+            <input class="search-filter" type="text" placeholder="Поиск по адресу" id="search-filter" ind="0">
+            <div class="not-found-list" style="display:none">
               <h1>Упс. Ни одного адреса не найдено.</h1>
               <p>Попробуйте выбрать другой адрес самовывоза.</p>
             </div>
@@ -243,8 +259,13 @@
             <div class="col-18">Когда привезут</div>
             <div class="col-40">Сколько стоит</div>
           </div>
-          <div class="checkout__listcontent" id="search-content">
-            <form id="deliveryForm">
+          <div class="checkout__listcontent" id="search-content-1">
+            <input class="search-filter" type="text" placeholder="Поиск по адресу" id="search-filter" ind="1">
+            <div class="not-found-list" style="display:none">
+              <h1>Упс. Ни одного адреса не найдено.</h1>
+              <p>Попробуйте выбрать другой адрес самовывоза.</p>
+            </div>
+            <form>
               <label class="checkout__listitem" for="gtJ6n">
                 <input type="radio" id="gtJ6n" name="check-list" value="gtJ6n">
                 <div class="highlight">
@@ -270,6 +291,10 @@
                 </div>
               </label>
             </form>
+            <div class="address-container">
+              <h3 class="address-container-text">Доставить по адресу</h3>
+              <input class="address-container-input" type="text">
+            </div>
           </div>
         </div>
         <div class="checkout__contacts">
@@ -290,7 +315,14 @@
               </div>
             </div>
             <h3 class="checkout__contacts-title">Способ оплаты</h3>
-            <h4 class="checkout__contacts-sub-title checkout__contacts_margin">Оплата при получении наличными или картой</h4>
+            <div>
+              <label class="radio-container" for="card">
+                <input type="radio" name="currency" id="card" value="card"><span class="radio-circle"></span><span class="card checkout-radio">Банковской картой онлайн</span>
+              </label>
+              <label class="radio-container" for="cash">
+                <input type="radio" name="currency" id="cash" value="cash"><span class="radio-circle"></span><span class="cash checkout-radio">При получении наличными или картой</span>
+              </label>
+            </div>
             <h3 class="checkout__contacts-title">Комментарий к заказу</h3>
             <h4 class="checkout__contacts-sub-title">Дополнительная информация</h4>
             <textarea class="checkout__contacts-comment checkout__contacts_margin"></textarea>
@@ -311,6 +343,7 @@
           </div>
           <div class="checkout__order-row checkout__order-row_button">
             <button class="checkout__order-button" id="order">Оформить заказ</button>
+            <div class="popup-policy">Отправляя форму вы соглашаетесь с <a target="_blank" href="/privacy-policy.html">политикой</a> обработки данных</div>
           </div>
         </div>
       </div>
@@ -361,14 +394,13 @@
       <div class="wrapper">
         <div class="footer__row">
           <div class="footer__col first">
-            <div class="footer__logo"></div><a class="footer__route" href="#"> <span>Оптовым клиентам</span></a><a class="footer__route footer__route-about" href="#"><span>О компании</span></a>
-            <p class="footer__text copy">2015 — 2017 ©Parklon</p>
+            <div class="footer__logo"></div><a class="footer__route" href="#"> <span>Условия доставки</span></a><a class="footer__route footer__route-about" href="#"><span>Оптовым клиентам</span></a>
+            <p class="footer__text copy">2015 — 2020 ©Parklon</p>
           </div>
           <div class="footer__col second"><a class="footer__main-route" href="#"> <span>Каталог</span></a><a class="footer__route" href="#"><span>Доставка и оплата</span></a><a class="footer__route" href="#"><span>Гарантии и возврат</span></a><a class="footer__route" href="#"><span>Вопрос-ответ</span></a><a class="footer__route" href="#"> <span>Отзывы</span></a><a class="footer__route" href="#"> <span>Контакты</span></a></div>
           <div class="footer__col third">
-            <p class="footer__text">Бесплатный звонок по России</p><a class="footer__phone-link" href="tel:88043331432">8 (804) 333-14-32</a>
-            <button class="show-back-call showBackCall">Заказать обратный звонок</button><a class="footer__mail" href="mailto:info@parklon.ru">Info@parklon.ru</a>
-            <p class="footer__text">Мы в социальных сетях:</p><a class="footer__vk-route" href="#"><span>Вконтакте</span></a>
+            <p class="footer__text">Бесплатный звонок по России</p><a class="footer__phone-link" href="tel:88043331432">8 (804) 333-14-32</a><a class="footer__mail" href="mailto:info@parklon.ru">Info@parklon.ru</a>
+            <p class="footer__text">Мы в социальных сетях:</p><a class="footer__fb-route" href="#"><span>Facebook</span></a>
           </div>
           <div class="footer__col fourth">
             <div class="footer__inst"></div>
