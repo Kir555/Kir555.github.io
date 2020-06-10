@@ -28,12 +28,25 @@ var myMap,
 
 function drop(e, t) {
   document.getElementById(e).classList.toggle('show'), document.getElementById(t).classList.toggle('show');
+  var parent = document.getElementById(t).parentNode;
+
+  var clickOutside = function clickOutside(e) {
+    var el = $(parent);
+    if ($(e.target).closest(el).length) return;
+    $(parent).removeClass('show');
+    $(document).off('click', clickOutside);
+  };
+
+  $(document).on('click', clickOutside);
 }
 
 function hideDrop(e, t) {
   document.getElementById(e).classList.remove('show'), document.getElementById(t).classList.remove('show');
 }
 
+$('.popup__overlay').click(function () {
+  $(this).parent().fadeToggle();
+});
 $('.dropdown a').click(function (e) {
   if (!$(this).hasClass('active')) {
     var lastNode = $(this).parent().find('a.active');
@@ -170,7 +183,17 @@ toggle(), document.getElementById('toggleTextTitle') && document.getElementById(
   });
 }), [].map.call(document.querySelectorAll('.selectCity span'), function (e) {
   e.addEventListener('click', function () {
-    this.parentNode.classList.toggle('open');
+    var parent = this.parentNode;
+    parent.classList.toggle('open');
+
+    var clickOutside = function clickOutside(e) {
+      var el = $(parent);
+      if ($(e.target).closest(el).length) return;
+      el.removeClass('open');
+      $(document).off('click', clickOutside);
+    };
+
+    $(document).on('click', clickOutside);
   });
 }), [].map.call(document.querySelectorAll('.selectCity-modal__accept'), function (e) {
   e.addEventListener('click', function () {
@@ -254,7 +277,6 @@ function swapElements(obj1, obj2) {
   var temp = document.createElement('div');
   obj1.parentNode.insertBefore(temp, obj1);
   obj2.parentNode.insertBefore(obj1, obj2);
-  temp.parentNode.insertBefore(obj2, temp);
   temp.parentNode.removeChild(temp);
 }
 
@@ -278,60 +300,20 @@ $('.contacts__address-title').click(function (e) {
 
     if ($(window).width() < 768) {
       swapElements(document.getElementById('map'), document.getElementById(swapTo));
-      console.log(swapTo);
       document.getElementById('map').classList.add('show');
     }
   } else {
     if ($(window).width() < 768) {
-      var swapTo = $(this).attr('swapTo');
-      console.log(swapTo);
-      swapElements(document.getElementById('map'), document.getElementById(swapTo));
-      document.getElementById('map').classList.add('show');
+      if (!document.getElementById('map').classList.contains('show')) {
+        var swapTo = $(this).attr('swapTo');
+        swapElements(document.getElementById('map'), document.getElementById(swapTo));
+        document.getElementById('map').classList.add('show');
+      } else {
+        document.getElementById('map').classList.remove('show');
+      }
     }
   }
-}); // document.getElementById("sabbiButton") && document.getElementById("sabbiButton").addEventListener("click", function () {
-//   myPlacemark.geometry.setCoordinates([55.69587, 37.664896]);
-//   myMap.panTo([55.69587, 37.664896], {
-//     flying: !0
-//   });
-//   if ($(window).width() < 768) {
-//     document.getElementById("map").classList.toggle("show");
-//     document.getElementById("sabbiButton").innerHTML = 'На карте';
-//     document.getElementById("kiddieWorld").innerHTML = 'Показать на карте';
-//     document.getElementById("kiddieWorld").classList.remove('contacts__address-map-button');
-//     document.getElementById("kiddieWorld").classList.add('contacts__address-map-button-transparent');
-//     document.getElementById("sabbiButton").classList.remove('contacts__address-map-button-transparent');
-//     document.getElementById("sabbiButton").classList.add('contacts__address-map-button');
-//     if (togglemap1) {
-//       swapElements(document.getElementById("map"), document.getElementById("map-mobile-1"));
-//       document.getElementById("map").classList.add("show");
-//       togglemap1 = false;
-//       togglemap2 = true;
-//     }
-//   }
-// });
-// document.getElementById("kiddieWorld") && document.getElementById("kiddieWorld").addEventListener("click", function () {
-//   myPlacemark.geometry.setCoordinates([52.51253, 85.17341]);
-//   myMap.panTo([52.51253, 85.17341], {
-//     flying: !0
-//   });
-//   if ($(window).width() < 768) {
-//     document.getElementById("map").classList.toggle("show");
-//     document.getElementById("kiddieWorld").innerHTML = 'На карте';
-//     document.getElementById("sabbiButton").innerHTML = 'Показать на карте';
-//     document.getElementById("sabbiButton").classList.remove('contacts__address-map-button');
-//     document.getElementById("sabbiButton").classList.add('contacts__address-map-button-transparent');
-//     document.getElementById("kiddieWorld").classList.remove('contacts__address-map-button-transparent');
-//     document.getElementById("kiddieWorld").classList.add('contacts__address-map-button');
-//     if (togglemap2) {
-//       swapElements(document.getElementById("map"), document.getElementById("map-mobile-2"));
-//       document.getElementById("map").classList.add("show");
-//       togglemap1 = true;
-//       togglemap2 = false;
-//     }
-//   }
-// })
-
+});
 [].map.call(document.querySelectorAll('.showBackCall'), function (e) {
   e.addEventListener('click', function () {
     document.getElementById('backCallModal').classList.toggle('show');
